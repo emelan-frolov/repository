@@ -1,0 +1,8 @@
+numpy
+opencv-python
+Pillow      # Для возможных операций с изображениями, EXIF
+rasterio    # Для чтения ортофото/DSM в модуле анализа
+# matplotlib  # Для отладки/визуализации в анализе
+
+# tensorflow
+# torch torchvision torchaudio

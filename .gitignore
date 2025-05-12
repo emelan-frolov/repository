@@ -1,0 +1,76 @@
+# --- Python / Conda / venv ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+develop-eggs/
+eggs/
+sdist/
+var/
+wheels/
+*.egg
+*.manifest
+*.spec
+*.cfg
+pip-wheel-metadata/
+*.log # Игнорировать файлы логов по умолчанию
+
+# Виртуальные окружения
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+# Conda окружения обычно не в проекте, но на всякий случай
+conda_env/
+ortho_env/
+ortho_analyzer_env/
+# ... добавьте имя вашего conda окружения, если оно другое
+
+# --- Данные и Результаты ---
+# ВАЖНО: Исключаем папки с потенциально большими данными и результатами ODM
+data/input_images/*
+!data/input_images/.gitkeep # Позволяет сохранить пустую папку в Git
+data/output/*
+!data/output/.gitkeep
+data/output/odm_processing/*
+!data/output/odm_processing/.gitkeep
+
+# Исключаем большие модели (лучше использовать Git LFS или хранить отдельно)
+models/*.pt
+models/*.pth
+models/*.h5
+models/*.onnx
+models/*.engine
+models/*.pb
+# Оставляем возможность добавить маленькие файлы моделей или текстовые описания
+!models/.gitkeep
+!models/*.txt
+!models/*.md
+
+# Исключаем большие файлы разметки
+# data/parking_layout/*.json # Раскомментируйте, если JSON очень большой
+
+# --- IDE / Редакторы ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+nbproject/
+*.DS_Store # macOS
+Thumbs.db # Windows
+
+# --- Временные файлы ОС ---
+*~
+*.swp
+*.swo
+
+# Если вы создадите файл для ключей API или паролей
+# .secrets
+# secrets.yaml
+# *.env
